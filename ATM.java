@@ -18,9 +18,10 @@ public class ATM
     User curUser;
     curUser=promptMenu(theBank);
     printMenu(curUser);
-    while(true)
+    int ch=0;
+    while(ch!=3)
     {
-        int ch=Menu();
+        ch=Menu();
         switch(ch)
         {
          case 1:
@@ -32,6 +33,7 @@ public class ATM
          break;
         }
     }
+    System.out.println("\n\n####################################################\n############Thanks for visiting our Bank.###########\n####################################################");
     }
     public static User promptMenu(Bank theBank)throws IOException
     {
@@ -216,9 +218,9 @@ public class ATM
     public static int Menu()throws IOException
     {
         BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("\n\n\n1.Login as existing User\n2.Add a new user");
+        System.out.println("\n\n\n1.Login as existing User\n2.Add a new user\n3.Leave the Bank");
         int ch=Integer.parseInt(in.readLine());
-        while(ch!=1&&ch!=2)
+        while(ch!=1&&ch!=2&&ch!=3)
         {
             System.out.println("Invalid Choice!!!!Please Enter 1 or 2");
             ch=Integer.parseInt(in.readLine());
