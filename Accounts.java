@@ -27,7 +27,7 @@ public class Accounts
     {
         double balance=getBalance();
         if(balance>=0)
-         System.out.printf("User ID:"+uuid+":Balance:$"+balance+":Type:"+name+"\n");
+         System.out.printf("Account ID:"+uuid+":Balance:$"+balance+":Type:"+name+"\n");
         else
          System.out.printf(uuid+":("+balance+"):"+name+"\n");
     }
