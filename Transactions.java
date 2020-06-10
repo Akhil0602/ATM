@@ -25,6 +25,6 @@ public class Transactions
     }
     public void details()
     {
-        System.out.println(timeStamp+":"+amount+":"+memo);
+        System.out.println(timeStamp+":$"+amount+":"+memo);
     }
 }
