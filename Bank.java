@@ -74,8 +74,12 @@ public class Bank
         for(User u:this.users)
         {
             if(u.getUserId().equals(UserId)&&u.validatePin(pin))
-            return u;
+            {
+             System.out.println("\u000C");
+             return u;
+            }
         }
+        System.out.println("\u000C");
         return null;
     }
     public String getName()
